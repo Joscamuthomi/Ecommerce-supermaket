@@ -1,0 +1,548 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #56ff40;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    box-shadow: 2px 5px #8B0000;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #e22424;
+    text-shadow: 2px 2px 5px #8B0000;
+    text-decoration: none;
+    width: 20%;
+    text-align: left;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-toggler {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .navbar {
+        background-color: green;
+    }
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      margin-top: 30px;
+      left: 0;
+      background: #ff4081;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+      transition: width 0.4s ease, height 0.6s ease;
+    }
+  
+    .navbar-nav.show {
+      width: 50%;
+      height: 100vh;
+    }
+  
+    .nav-item {
+      padding: 15px;
+      text-align: center;
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-nav:not(.show) {
+      display: none;
+    }
+  }
+  
+  /* Slider Section Styles */
+  .slider-section {
+    width: 100%;
+    height: 100vh;
+    margin-top: 60px; /* Adjusted for fixed navbar */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-container { 
+    position: relative;
+    width: 100%;
+    height: 100%; /* Full viewport height */
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 1s ease;
+  }
+  
+  .slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers entire container */
+  }
+  
+  /* Unique Overlay Colors for Each Slide */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  /* Overlay Styles for Each Slide */
+.slide:nth-child(1) .overlay {
+    background: linear-gradient(to top, rgba(0, 128, 0, 0.8), rgba(0, 128, 0, 0));
+  }
+  
+  .slide:nth-child(2) .overlay {
+    background: linear-gradient(to top, rgba(255, 105, 180, 0.8), rgba(255, 105, 180, 0));
+  }
+  
+  .slide:nth-child(3) .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0));
+  }
+  
+  .message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: aqua;
+    text-shadow: 0 2px;
+  }
+  
+  .dots {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .slider-section, .slider-container, .slider {
+        height: 100vh; /* Ensure the slider takes full viewport height */
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the entire slide */
+    }
+}
+
+  .about-us {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.section-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #ff5733;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.about-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    height: 550px;
+    gap: 30px;
+}
+
+.about-left {
+    width: 48%;
+    background-image: url('images/home 2.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.left-overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.about-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-right {
+    width: 48%;
+    background-image: url('images/HD-wallpaper-women-asian-supermarket-girl-sunglasses.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(34, 195, 69, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(82, 22, 22);
+    padding: 40px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.commitment-content {
+    max-width: 90%;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p, ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-overlay {
+        width: 90%;
+        padding: 30px 0;
+    }
+
+    .about-box {
+        padding: 15px;
+    }
+
+    .commitment-content {
+        padding: 30px;
+    }
+}
+
+
+
+
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    padding-bottom: 20px; /* Prevent content from touching the buttons */
+}
+
+.service-item {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.service-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.service-overlay h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.slider-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.slider-buttons button {
+    padding: 10px 20px;
+    background-color: #0a74da;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.slider-buttons button:hover {
+    background-color: #0c63b8;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background: #333;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ff6f61;
+    text-transform: uppercase;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social,
+.footer-newsletter {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-social ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-social ul li a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social ul li a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background-color: #ff4d3b;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    background-color: #222;
+    padding: 15px;
+    color: #bbb;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-newsletter input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-newsletter button {
+        width: 100%;
+    }
+
+    .footer-social ul {
+        flex-direction: column;
+    }
+
+    .footer-social ul li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Supermarket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand logo" href="#">Quick <br>Mart</a>
+        <button class="navbar-toggler" onclick="toggleNav()">☰</button>
+        <ul class="navbar-nav" id="navbarNav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="login_signup.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="staff_login.php">Staff Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contactus">Contact Us</a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+
+
+<section class="slider-section">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="images/home 2.webp" alt="Slide 1">
+          <div class="overlay"></div>
+          <div class="message">Welcome to FreshMart! <br> your mobile sopping option</div>
+        </div>
+        <div class="slide">
+          <img src="images/home 3.jpeg" alt="Slide 2">
+          <div class="overlay"></div>
+          <div class="message">Shop Your Essentials <br>as fast as onclick</div>
+        </div>
+        <div class="slide">
+          <img src="images/casheer 3.jpg" alt="Slide 3">
+          <div class="overlay"></div>
+          <div class="message">Quick, Easy, and Fresh <br>we value you</div>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+  <section class="about-us" id="aboutus">
+    <h1 class="section-heading">About Us</h1>
+    <div class="about-container">
+        <!-- Left Side: Image Background with Two Separate Divs -->
+        <div class="about-left">
+            <div class="left-overlay">
+                <div class="about-box">
+                    <h2>Welcome to QuickMart</h2>
+                    <p>Your one-stop destination for fresh groceries, household essentials, and more—all at your convenience!</p>
+                </div>
+
+                <div class="about-box">
+                    <h2>Why Choose Us?</h2>
+                    <ul>
+                        <li>✔ Fast & Reliable Delivery</li>
+                        <li>✔ Fresh & High-Quality Products</li>
+                        <li>✔ Secure Payment Options</li>
+                        <li>✔ 24/7 Customer Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Our Commitment (Balanced with Left) -->
+        <div class="about-right">
+            <div class="commitment-content">
+                <h2>Our Commitment</h2>
+                <p>At QuickMart, we are committed to ensuring customer satisfaction, sustainability, and responsible sourcing. 
+                   Our goal is to provide you with high-quality products while making a positive impact on the environment and our community.</p>
+                <p>We focus on reducing waste, using eco-friendly packaging, and supporting local farmers. 
+                   Your trust in us drives innovation and service excellence every day.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services-section" id="services">
+    <h2 style="color: blue;">OUR SEVICES</h2>
+    <div class="services-container">
+        <!-- Grocery Service -->
+        <div class="service-item">
+            <img src="images/OIP (1).jpeg" alt="Online Grocery Shopping">
+            <div class="service-overlay">
+                <h3>Online Grocery Shopping</h3>
+            </div>
+        </div>
+
+        <!-- Clothes Service -->
+        <div class="service-item">
+            <img src="images/clothes.jpg" alt="Clothes Selling">
+            <div class="service-overlay">
+                <h3>Clothes Selling</h3>
+            </div>
+        </div>
+
+        <!-- Shoes Service -->
+        <div class="service-item">
+            <img src="images/shoes.jpeg" alt="Shoe Selling">
+            <div class="service-overlay">
+                <h3>Shoe Selling</h3>
+            </div>
+        </div>
+
+        <!-- Furniture Service -->
+        <div class="service-item">
+            <img src="images/faniture.jpg" alt="Furniture Selling">
+            <div class="service-overlay">
+                <h3>Furniture Selling</h3>
+            </div>
+        </div>
+
+        <!-- Kitchen Items Service -->
+        <div class="service-item">
+            <img src="images/kitchen.jpg" alt="Kitchen Shopping">
+            <div class="service-overlay">
+                <h3>Kitchen Shopping</h3>
+            </div>
+        </div>
+
+        <!-- Drinks Service -->
+        <div class="service-item">
+            <img src="images/drinks.jpeg" alt="Drinks Shopping">
+            <div class="service-overlay">
+                <h3>Drinks Shopping</h3>
+            </div>
+        </div>
+
+        <!-- Other Services -->
+        <div class="service-item">
+            <img src="images/electronics.jpg" alt="Electronics">
+            <div class="service-overlay">
+                <h3>Electronics</h3>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <img src="images/beauty.jpeg" alt="Beauty Products">
+            <div class="service-overlay">
+                <h3>Beauty Products</h3>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <img src="images/delivery.jpeg" alt="delivery">
+            <div class="service-overlay">
+                <h3>Free Delivery</h3>
+            </div>
+
+            <div class="service-item">
+                <img src="images/offer.jpeg" alt="offers">
+                <div class="service-overlay">
+                    <h3>Special offers</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons for navigation -->
+    <div class="slider-buttons">
+        <button class="prev-btn">Previous</button>
+        <button class="next-btn">Next</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>We provide a wide range of high-quality products at affordable prices, from groceries to electronics, ensuring your shopping experience is fast, secure, and enjoyable.</p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Contact Info</h3>
+            <ul>
+                <li><a href="tel:+1234567890">Phone: +1 234 567 890</a></li>
+                <li><a href="mailto:info@retailstore.com">Email: info@retailstore.com</a></li>
+                <li>Address: 123 Retail Street, Shopping City, Country</li>
+            </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#" target="_blank"><img src="images/facebook.jpeg" alt="Facebook"></a></li>
+                <li><a href="#" target="_blank"><img src="images/tweetwer.jpeg" alt="Instagram"></a></li>
+                <li><a href="#" target="_blank"><img src="images/tyweeter.webp" alt="Twitter"></a></li>
+                <li><a href="#" target="_blank"><img src="images/maps.png" alt="LinkedIn"></a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest updates and special offers delivered directly to your inbox.</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 Retail Store. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
